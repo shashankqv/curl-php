@@ -1,0 +1,22 @@
+<html>
+<head>
+
+<style type="text/css">
+body {background-color:#d0e4fe;}
+h1{color:orange;text-align:center;}
+p {color:blue;}
+</style>
+
+<title> URL Information Checker Using Curl </title>
+
+</head>
+<body>
+<h1> URL Information Checker <h1>
+
+<form action="curl_url_request.php" method="post">
+<p>Enter URL :</p>  <input type="text" name="website"><br> 
+<input type="submit">
+</form>
+
+</body>
+</html>
