@@ -5,8 +5,9 @@ from fabric.contrib.console import confirm
 from fabric.api import *
 
 
-#env.hosts = ['root@205.147.110.100']
+#env.hosts = ['shashank@localhost']
 
+# Testing for fabric deployment test
 def test():
     with settings(warn_only=True):
         result = local('./manage.py test my_app', capture=True)
