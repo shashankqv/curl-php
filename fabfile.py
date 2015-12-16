@@ -7,7 +7,9 @@ from fabric.api import *
 
 #env.hosts = ['shashank@localhost']
 
+# added a line to test fabric
 # Testing for fabric deployment test
+
 def test():
     with settings(warn_only=True):
         result = local('./manage.py test my_app', capture=True)
@@ -17,12 +19,12 @@ def test():
 
 
 def commit():
-    with settings(warn_only=True):
-        result = local('git add -p && git commit', capture=True)
+    #with settings(warn_only=True):
+    #    result = local('git add -p && git commit', capture=True)
 
-    if result.failed and not confirm("Commit failed. Continue anyway?"):
-        abort("aborting as user request")
-    #local("git add -p && git commit")
+    #if result.failed and not confirm("Commit failed. Continue anyway?"):
+    #    abort("aborting as user request")
+    local("git add -p && git commit")
 
 def push():
     local("git push")
